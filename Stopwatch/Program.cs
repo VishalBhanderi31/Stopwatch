@@ -15,10 +15,18 @@ namespace Stopwatch
             do
             {
                 var stopwatch = new Stopwatch();
+                // Check an Exception uncomment below line
+                //stopwatch.Stop();
+
                 stopwatch.Start();  
+
+                //You can not start stopwatch in between
+                //stopwatch.Stop();
+
                 //To measure stopwatch exact time
                 Thread.Sleep(1000);
                 stopwatch.Stop();
+
                 Console.WriteLine("Duration : {0}", stopwatch.ResulTimeSpan());
                 Console.WriteLine("Press Enter to run again (or enter any key except @'Enter' to exit! ");
                 var input = Console.ReadKey();
